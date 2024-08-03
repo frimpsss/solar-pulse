@@ -35,7 +35,7 @@ const TextInput = ({
   const [visible, setVisibile] = useState(false);
   const [t, setT] = useState(false);
   return (
-    <div className="">
+    <div className="w-full">
       <label
         htmlFor={id}
         className={`text-white text-[1.15rem] ${

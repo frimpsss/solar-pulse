@@ -24,8 +24,8 @@ function App() {
     wind_speed: Yup.number().required("Wind speed is required"),
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [modal, showModal] = useState<boolean>(false)
-  const [res, setRes] = useState()
+  const [modal, showModal] = useState<boolean>(false);
+  const [res, setRes] = useState();
   const { ...form } = useFormik({
     initialValues: {
       latitude: "",
@@ -68,21 +68,19 @@ function App() {
 
           if (response.data.status) {
             console.log(response.data.data);
-            setRes(response.data.data)
-            showModal(true)
-          }
-          else{
-            toast.error('An error occurred')
+            setRes(response.data.data);
+            showModal(true);
+          } else {
+            toast.error("An error occurred");
           }
         } catch (error) {
-          if(isAxiosError(error)){
-            toast.error(error.response?.data.message)
-          }
-          else{
-            toast.error('An error occurred')
+          if (isAxiosError(error)) {
+            toast.error(error.response?.data.message);
+          } else {
+            toast.error("An error occurred");
           }
         } finally {
-          form.resetForm()
+          form.resetForm();
           setIsLoading(false);
         }
       }
@@ -91,15 +89,18 @@ function App() {
 
   return (
     <>
-    <div className="fixed w-[100vw] h-[100vh] bg-black/50 z-[-5]"></div>
-    <img className="fixed z-[-10] h-[100vh] left-0 right-0 w-[100vw]" src="https://images.unsplash.com/photo-1508790762848-8a3096277c8f?q=80&w=3288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-      <div className="w-[550px] mx-auto mb-[4rem]">
+      <div className="fixed w-[100vw] h-[100vh] bg-black/50 z-[-5]"></div>
+      <img
+        className="fixed z-[-10] h-[100vh] object-cover  left-0 right-0 w-[100vw]"
+        src="https://images.unsplash.com/photo-1508790762848-8a3096277c8f?q=80&w=3288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+      <div className="lg:w-[550px] lg:mx-auto mb-[4rem] px-6 lg:px-0">
         <div>
           <h4 className="text-[2.3rem] font-medium text-center text-white py-[2rem] ">
             Solar Pulse
           </h4>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className=" flex flex-col lg:grid lg:grid-cols-2 gap-6">
           <TextInput
             id={"latitude"}
             type={"number"}
@@ -209,9 +210,12 @@ function App() {
         </div>
       </div>
 
-      <Modal isOpen={modal} toogleIsOpen={()=>{
-        showModal(false)
-      }} >
+      <Modal
+        isOpen={modal}
+        toogleIsOpen={() => {
+          showModal(false);
+        }}
+      >
         <div>
           <h4>Res {res}</h4>
         </div>
