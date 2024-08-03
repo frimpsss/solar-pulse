@@ -91,9 +91,11 @@ function App() {
 
   return (
     <>
+    <div className="fixed w-[100vw] h-[100vh] bg-black/50 z-[-5]"></div>
+    <img className="fixed z-[-10] h-[100vh] left-0 right-0 w-[100vw]" src="https://images.unsplash.com/photo-1508790762848-8a3096277c8f?q=80&w=3288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
       <div className="w-[550px] mx-auto mb-[4rem]">
         <div>
-          <h4 className="text-[2.3rem] font-medium text-center text-mantis-950 py-[2rem] ">
+          <h4 className="text-[2.3rem] font-medium text-center text-white py-[2rem] ">
             Solar Pulse
           </h4>
         </div>

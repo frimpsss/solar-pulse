@@ -38,7 +38,7 @@ const TextInput = ({
     <div className="">
       <label
         htmlFor={id}
-        className={`text-mantis-950 text-[1.15rem] ${
+        className={`text-white text-[1.15rem] ${
           boldenText ? "font-medium" : "font-normal"
         }`}
       >
@@ -63,7 +63,7 @@ const TextInput = ({
           onFocus={(e) => {
             setVisibile(true);
           }}
-          className="shadow-sm ring-inset focus:ring-1 focus:ring-offset-2 focus:ring-mantis-950 focus:outline-mantis-950  focus:border-mantis-900 block w-full sm:text-sm  rounded-md p-2"
+          className="shadow-sm ring-inset focus:ring-1 focus:ring-offset-2 focus:ring-mantis-200 focus:outline-mantis-950  focus:border-mantis-200 block w-full sm:text-sm  rounded-md p-2"
         />
         {errors[id] && touched[id] && type !== "password" ? (
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">

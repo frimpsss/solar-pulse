@@ -24,7 +24,7 @@ export default function CustomSelect({
     <div className="flex flex-col gap-y-2">
       <label
         htmlFor={id}
-        className={`text-mantis-950 text-[1.15rem] ${
+        className={`text-white text-[1.15rem] ${
           boldText ? "font-medium" : "font-normal"
         }`}
       >
