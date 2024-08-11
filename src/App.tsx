@@ -112,7 +112,7 @@ function App() {
           <TextInput
             id={"longitude"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. -334.36"}
             label={"Longitude"}
             boldenText
             {...form}
@@ -120,7 +120,7 @@ function App() {
           <TextInput
             id={"altitude"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 783.34"}
             label={"Altitude"}
             boldenText
             {...form}
@@ -128,7 +128,7 @@ function App() {
           <TextInput
             id={"humidity"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 46.04"}
             label={"Humidity"}
             boldenText
             {...form}
@@ -136,7 +136,7 @@ function App() {
           <TextInput
             id={"ambient_temp"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 74.34"}
             label={"Ambient Temperature"}
             boldenText
             {...form}
@@ -144,7 +144,7 @@ function App() {
           <TextInput
             id={"pressure"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 1.34 in Pa"}
             label={"Pressure"}
             boldenText
             {...form}
@@ -152,7 +152,7 @@ function App() {
           <TextInput
             id={"wind_speed"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 13.37"}
             label={"Wind Speed"}
             boldenText
             {...form}
@@ -160,7 +160,7 @@ function App() {
           <TextInput
             id={"cloud_ceiling"}
             type={"number"}
-            placeholder={"eg. 234.34"}
+            placeholder={"eg. 7"}
             label={"Cloud Ceiling"}
             boldenText
             {...form}
@@ -192,7 +192,7 @@ function App() {
             <TextInput
               id={"solar_rating"}
               type={"number"}
-              placeholder={"eg. 234.34"}
+              placeholder={"eg. 10.3 in kW/h"}
               label={"Solar Rating"}
               boldenText
               {...form}
@@ -216,8 +216,9 @@ function App() {
           showModal(false);
         }}
       >
-        <div>
-          <h4>Res {res}</h4>
+        <div className="p-4">
+          <h4 className="text-3xl text-mantis-900 mb-8">Results</h4>
+          <h4 className="text-[1.2rem] font-light">Your predicted power is <span className="font-bold">{parseFloat(res).toFixed(2)}kW/H</span></h4>
         </div>
       </Modal>
     </>
