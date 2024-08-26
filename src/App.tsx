@@ -218,7 +218,10 @@ function App() {
       >
         <div className="p-4">
           <h4 className="text-3xl text-mantis-900 mb-8">Results</h4>
-          <h4 className="text-[1.2rem] font-light">Your predicted power is <span className="font-bold">{parseFloat(res).toFixed(2)}kW/H</span></h4>
+          <h4 className="text-[1.2rem] font-light">
+            Your predicted power is{" "}
+            <span className="font-bold">{parseFloat(res).toFixed(2)}W</span>
+          </h4>
         </div>
       </Modal>
     </>
